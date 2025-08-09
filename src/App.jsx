@@ -1,17 +1,52 @@
 // import Sushi from "./sushi";
+import { Button, Container, Stack, TextField } from "@mui/material";
+import Header from "./header";
+import Task from "./task";
 import { useState } from "react";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [taskName, setTaskName] = useState("");
+  const [tasks, setTasks] = useState([]);
+
+  function HandleInput(event) {
+    const inputText = event.target.value;
+    setTaskName(inputText);
+  }
 
   function HandleClick() {
-    setCount(count + 1);
+    const newTask = {
+      title: taskName,
+      isDone: false,
+    };
+
+    const _tasks = [...tasks, newTask];
+
+    setTasks(_tasks);
+    setTaskName("");
   }
 
   return (
     <div>
-      <p>{count}</p>
-      <button onClick={HandleClick}>Count UP</button>
+      <Header />
+      <Container sx={{ paddingTop: 10 }}>
+        <Stack sx={{ marginBottom: 3, gap: 2 }}>
+          <TextField
+            value={taskName}
+            onChange={HandleInput}
+            id="outlined-basic"
+            label="TODO"
+            variant="outlined"
+          />
+          <Button onClick={HandleClick} variant="contained">
+            Create
+          </Button>
+        </Stack>
+        <Stack sx={{ gap: 1 }}>
+          {tasks.map((task, index) => {
+            return <Task id={index} name={task.title} key={index} />;
+          })}
+        </Stack>
+      </Container>
     </div>
   );
 
