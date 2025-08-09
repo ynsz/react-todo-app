@@ -6,8 +6,9 @@
 
 - React と Vite を使用した SPA（シングルページアプリケーション）
 - npm を使用したパッケージ管理
-- 状態管理は React Hooks（useState, useEffect）で実装
-- TODO の追加・削除・完了状態の切り替えが可能
+- 状態管理は React Hooks（useState）で実装
+- TODO の追加・完了状態の切り替えが可能
+- MUI の使用
 
 ## デモ
 
