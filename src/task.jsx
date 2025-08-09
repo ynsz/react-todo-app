@@ -12,7 +12,7 @@ function Task({ id, task, doneFunc }) {
   }
 
   return (
-    <Card sx={{ minWidth: 275, opacity: task.isDone ? 0.5 : 1 }}>
+    <Card sx={{ minWidth: 275, opacity: task.isDone ? 0.1 : 1 }}>
       <CardContent>
         <Typography gutterBottom sx={{ color: "text.secondary", fontSize: 14 }}>
           ID:{id}

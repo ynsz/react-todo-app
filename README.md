@@ -12,8 +12,7 @@
 
 ## デモ
 
-![デモ画面](./screenshot.png)  
-※ デモ用スクリーンショットを貼るか、デプロイ先 URL を記載してください。
+https://ynsz.github.io/react-todo-app/
 
 ## 開発環境
 
