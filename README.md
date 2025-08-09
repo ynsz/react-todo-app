@@ -1,12 +1,37 @@
-# React + Vite
+# React Todo App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+勉強会「React + Vite で始めるフロントエンド開発」のアウトプットとして作成した、シンプルな ToDo 管理アプリです。
 
-Currently, two official plugins are available:
+## 概要
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- React と Vite を使用した SPA（シングルページアプリケーション）
+- npm を使用したパッケージ管理
+- 状態管理は React Hooks（useState, useEffect）で実装
+- TODO の追加・削除・完了状態の切り替えが可能
 
-## Expanding the ESLint configuration
+## デモ
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+![デモ画面](./screenshot.png)  
+※ デモ用スクリーンショットを貼るか、デプロイ先 URL を記載してください。
+
+## 開発環境
+
+- Node.js 22.x（mise で管理）
+- npm 10.x
+- React 18
+- Vite 5
+- ESLint + Prettier
+
+## セットアップ
+
+```bash
+# リポジトリをクローン
+git clone https://github.com/ynsz/react-todo-app.git
+cd react-todo-app
+
+# 依存パッケージをインストール
+npm install
+
+# 開発サーバーを起動
+npm run dev
+```
