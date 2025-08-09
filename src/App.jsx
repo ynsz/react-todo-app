@@ -25,6 +25,14 @@ function App() {
     setTaskName("");
   }
 
+  function HandleDone(id) {
+    const _tasks = [...tasks];
+
+    _tasks[id].isDone = !tasks[id].isDone;
+
+    setTasks(_tasks);
+  }
+
   return (
     <div>
       <Header />
@@ -43,7 +51,15 @@ function App() {
         </Stack>
         <Stack sx={{ gap: 1 }}>
           {tasks.map((task, index) => {
-            return <Task id={index} name={task.title} key={index} />;
+            return (
+              <Task
+                id={index}
+                name={task.title}
+                task={task}
+                doneFunc={HandleDone}
+                key={index}
+              />
+            );
           })}
         </Stack>
       </Container>
